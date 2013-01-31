@@ -5,7 +5,7 @@
 #include <time.h>
 #include "policy.h"
 
-//#define TEST 1
+#define TEST 1
 
 int is_synced = 0;
 
@@ -147,7 +147,7 @@ int main(int argc, char **argv)
   	param.sched_priority = 12;
  	pthread_attr_setschedpolicy(&attr_wd,SCHED_RR);
  	pthread_attr_setschedparam(&attr_wd,&param);
- 	pthread_attr_setinheritsched(&attr_wd,PTHREAD_EXPLICIT_SCHED);//要使优先级其作用必须要有这句话
+ 	pthread_attr_setinheritsched(&attr_wd,PTHREAD_EXPLICIT_SCHED);//要使优先级其作用必须要有这句�?
 
  	param.sched_priority = 11;
  	pthread_attr_setschedpolicy(&attr_rcv_msg,SCHED_RR);
